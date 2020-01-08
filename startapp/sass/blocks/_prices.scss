@@ -1,0 +1,126 @@
+.prices {
+    padding: 80px 0;
+
+    &__content {
+        display: flex;
+        width: 100%;
+        margin-top: 90px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+        border: 1px solid #dedede;
+        position: relative;
+
+        &:hover {
+            .prices__item-plan {
+                background-color: $light-blue;
+            }
+
+            .price,
+            .secondary-price__num {
+                color: $light-blue;
+            }
+        }
+
+        + .prices__item {
+            margin-left: 30px;
+        }
+
+        &-plan {
+            padding: 15px;
+            background-color: #383838;
+            color: #e4e4e4;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            position: absolute;
+            top: -25px;
+            border-radius: 5px;
+        }
+
+        &-pricebox {
+            display: flex;
+            position: relative;
+            margin-top: 40px;
+            margin-bottom: 20px;
+
+            &:before {
+                content: '$';
+                color: #8a8a8a;
+                font-size: 16px;
+                font-weight: 400;
+                position: absolute;
+                left: -15px;
+                bottom: 10px;
+            }
+
+            &:after {
+                content: 'Monthly';
+                font-size: 12px;
+                font-weight: 400;
+                color: #8a8a8a;
+                position: absolute;
+                right: -45px;
+                bottom: 10px;
+            }
+
+            .price {
+                font-size: 60px;
+                font-weight: 800;
+                color: #383838;
+                margin-right: 10px;
+            }
+
+            .secondary-price {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                &__num {
+                    font-size: 16px;
+                    font-weight: 800;
+                    color: #383838;
+                }
+
+                img {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+
+        &-features {
+            padding: 25px 0;
+            width: 90%;
+            text-align: center;
+            border-top: 1px solid #dedede;
+            border-bottom: 1px solid #dedede;
+
+            p {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 2.85;
+                color: #8a8a8a;
+            }
+        }
+
+        &-btn {
+            padding: 25px 0;
+
+            .btn {
+                padding: 15px;
+                background-color: $light-blue;
+                font-size: 13px;
+                font-weight: 800;
+                color: #e4e4e4;
+                border-radius: 5px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

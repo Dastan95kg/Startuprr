@@ -1,0 +1,40 @@
+.rhombus {
+    display: block;
+    width: 15px;
+    height: 15px; 
+    fill:#484848;
+}
+
+.select {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.previous {
+    display: block;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+}
+
+.next {
+    display: block;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+}
+
+.heart {
+    display: block;
+    width: 25px;
+    height: 25px;
+    z-index: 2;
+}
+
+.shop {
+    display: block;
+    width: 17px;
+    height: 17px;
+    z-index: 2;
+}

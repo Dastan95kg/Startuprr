@@ -1,0 +1,71 @@
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+
+    .text {
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 26px;
+        line-height: 0.77;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: #fff;
+    }
+}
+
+.before, .after {
+    width: 30px;
+    height: 20px;
+}
+
+.offer {
+    color: $light-blue;
+}
+
+// Linetitle
+.linetitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 20px;
+    position: relative;
+
+    &-outer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin-bottom: 20px;
+
+        .linetitle {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.linetitle-wrapper {
+    display: flex;
+}
+
+.linetitle-text {
+    margin-left: 15px;
+    margin-right: 15px;
+    z-index: 1;
+    font-size: 26px;
+    line-height: 0.77;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.lines {
+    position: absolute;
+}
+
+
+
+
+    

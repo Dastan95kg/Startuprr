@@ -1,0 +1,25 @@
+.sponsors {
+    padding: 50px 0;
+    background-color: #383838;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .prev-btn {
+        position: absolute;
+        left: -70px;
+    }
+
+    .next-btn {
+        position: absolute;
+        right: -70px;
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 1140px;
+    }
+}

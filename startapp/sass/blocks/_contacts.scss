@@ -1,0 +1,50 @@
+.contacts {
+    padding: 60px 0;
+    background-color: #383838;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav__logo-name {
+        color: #b2b1b1;
+        text-transform: uppercase;
+    }
+
+    &__links {
+        display: flex;
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+
+    &__link {
+        padding: 12px;
+        border: 2px solid #606060;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: $light-blue;
+        }
+
+        + .contacts__link {
+            margin-left: 10px;
+        }
+
+        .flaticon {
+            display: block;
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    &__copyright {
+        font-size: 13px;
+        font-weight: 800;
+        color: #cccccc;
+    }
+}

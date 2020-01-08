@@ -1,0 +1,46 @@
+@import 'vars';
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+// Imports
+@import "blocks/container";
+@import "blocks/intro";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/features";
+@import "blocks/advantages";
+@import "blocks/skills";
+@import "blocks/works";
+@import "blocks/facts";
+@import "blocks/title";
+@import "blocks/subtitle";
+@import "blocks/icons";
+@import "blocks/question";
+@import "blocks/btn";
+@import "blocks/team";
+@import "blocks/reviews";
+@import "blocks/sponsors";
+@import "blocks/prices";
+@import "blocks/purchase";
+@import "blocks/contacts";

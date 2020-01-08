@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+    
+    <!-- SVG Sprite -->
+    <svg display="none">
+        <symbol id="diamond" viewBox="0 0 223.646 223.646">
+            <polygon points="111.823,0 16.622,111.823 111.823,223.646 207.025,111.823 "/>
+        </symbol>
+    
+        <symbol id="select" viewBox="0 0 148.961 148.961">
+            <g>
+                <path d="M146.764,17.379c-2.93-2.93-7.679-2.929-10.606,0.001L68.852,84.697L37.847,53.691c-2.93-2.929-7.679-2.93-10.606-0.001
+                    c-2.93,2.929-2.93,7.678-0.001,10.606l36.309,36.311c1.407,1.407,3.314,2.197,5.304,2.197c1.989,0,3.897-0.79,5.304-2.197
+                    l72.609-72.622C149.693,25.057,149.693,20.308,146.764,17.379z"/>
+                <path d="M130.57,65.445c-4.142,0-7.5,3.357-7.5,7.5v55.57H15V20.445h85.57c4.143,0,7.5-3.357,7.5-7.5c0-4.142-3.357-7.5-7.5-7.5
+                    H7.5c-4.142,0-7.5,3.357-7.5,7.5v123.07c0,4.143,3.358,7.5,7.5,7.5h123.07c4.143,0,7.5-3.357,7.5-7.5v-63.07
+                    C138.07,68.803,134.713,65.445,130.57,65.445z"/>
+            </g>
+        </symbol>
+
+        <symbol id="hourglass" viewBox="0 0 453.872 453.871">
+            <g id="Layer_8_7_">
+                <path d="M369.822,42.794h17.744V0H66.305v42.794h17.746v11.105c0,69.716,23.859,133.656,63.155,171.591
+                    c-39.296,37.942-63.155,101.877-63.155,171.596v13.992H66.305v42.793h321.261v-42.793h-17.744v-13.992
+                    c0-69.719-23.863-133.653-63.154-171.596c39.291-37.935,63.154-101.864,63.154-171.591V42.794z M276.738,214.327l-14.735,11.163
+                    l14.735,11.163c36.771,27.885,61.451,84.345,64.71,146.425H112.431c3.257-62.074,27.926-118.534,64.708-146.425l14.727-11.163
+                    l-14.727-11.163c-36.776-27.888-61.451-84.34-64.708-146.42h229.008C338.189,129.987,313.508,186.439,276.738,214.327z
+                        M141.955,90.167h169.96c-2.457,47.136-21.202,90.009-49.143,111.183c0,0-4.784,2.066-11.173,8.47
+                    c-13.218,18.876-13.923,87.873-13.945,90.915c9.49,1.013,19.743,5.018,29.904,14.299c35.85,32.755,46.252,36.618,47.503,60.396
+                    H146.965c1.25-23.772,21.646-40.785,47.5-60.396c0,0,12.3-10.795,29.552-13.79c-0.314-0.542-0.498-0.908-0.498-0.908
+                    c0-64.99-21.248-92.857-21.248-92.857l-15.103-8.47C159.236,177.821,144.42,137.304,141.955,90.167z"/>
+            </g>
+        </symbol>
+
+        <symbol id="label" viewBox="0 0 295 295">
+            <path d="M290.156,23.89c-0.482-10.311-8.733-18.562-19.044-19.044L168.005,0.023c-5.62-0.272-11.097,1.855-15.077,5.836
+            L5.858,152.93C2.108,156.681,0,161.767,0,167.072s2.107,10.392,5.858,14.143l107.929,107.928c3.904,3.905,9.023,5.857,14.142,5.857
+            c5.118,0,10.237-1.953,14.143-5.857l147.069-147.069c3.98-3.98,6.1-9.454,5.837-15.077L290.156,23.89z M252.481,76.087
+            c-9.269,9.269-24.298,9.269-33.567,0s-9.269-24.298,0-33.567s24.298-9.269,33.567,0S261.751,66.817,252.481,76.087z"/>
+        </symbol>
+
+        <symbol id="like" viewBox="0 0 478.2 478.2">
+            <g>
+                <path d="M457.575,325.1c9.8-12.5,14.5-25.9,13.9-39.7c-0.6-15.2-7.4-27.1-13-34.4c6.5-16.2,9-41.7-12.7-61.5
+                    c-15.9-14.5-42.9-21-80.3-19.2c-26.3,1.2-48.3,6.1-49.2,6.3h-0.1c-5,0.9-10.3,2-15.7,3.2c-0.4-6.4,0.7-22.3,12.5-58.1
+                    c14-42.6,13.2-75.2-2.6-97c-16.6-22.9-43.1-24.7-50.9-24.7c-7.5,0-14.4,3.1-19.3,8.8c-11.1,12.9-9.8,36.7-8.4,47.7
+                    c-13.2,35.4-50.2,122.2-81.5,146.3c-0.6,0.4-1.1,0.9-1.6,1.4c-9.2,9.7-15.4,20.2-19.6,29.4c-5.9-3.2-12.6-5-19.8-5h-61
+                    c-23,0-41.6,18.7-41.6,41.6v162.5c0,23,18.7,41.6,41.6,41.6h61c8.9,0,17.2-2.8,24-7.6l23.5,2.8c3.6,0.5,67.6,8.6,133.3,7.3
+                    c11.9,0.9,23.1,1.4,33.5,1.4c17.9,0,33.5-1.4,46.5-4.2c30.6-6.5,51.5-19.5,62.1-38.6c8.1-14.6,8.1-29.1,6.8-38.3
+                    c19.9-18,23.4-37.9,22.7-51.9C461.275,337.1,459.475,330.2,457.575,325.1z M48.275,447.3c-8.1,0-14.6-6.6-14.6-14.6V270.1
+                    c0-8.1,6.6-14.6,14.6-14.6h61c8.1,0,14.6,6.6,14.6,14.6v162.5c0,8.1-6.6,14.6-14.6,14.6h-61V447.3z M431.975,313.4
+                    c-4.2,4.4-5,11.1-1.8,16.3c0,0.1,4.1,7.1,4.6,16.7c0.7,13.1-5.6,24.7-18.8,34.6c-4.7,3.6-6.6,9.8-4.6,15.4c0,0.1,4.3,13.3-2.7,25.8
+                    c-6.7,12-21.6,20.6-44.2,25.4c-18.1,3.9-42.7,4.6-72.9,2.2c-0.4,0-0.9,0-1.4,0c-64.3,1.4-129.3-7-130-7.1h-0.1l-10.1-1.2
+                    c0.6-2.8,0.9-5.8,0.9-8.8V270.1c0-4.3-0.7-8.5-1.9-12.4c1.8-6.7,6.8-21.6,18.6-34.3c44.9-35.6,88.8-155.7,90.7-160.9
+                    c0.8-2.1,1-4.4,0.6-6.7c-1.7-11.2-1.1-24.9,1.3-29c5.3,0.1,19.6,1.6,28.2,13.5c10.2,14.1,9.8,39.3-1.2,72.7
+                    c-16.8,50.9-18.2,77.7-4.9,89.5c6.6,5.9,15.4,6.2,21.8,3.9c6.1-1.4,11.9-2.6,17.4-3.5c0.4-0.1,0.9-0.2,1.3-0.3
+                    c30.7-6.7,85.7-10.8,104.8,6.6c16.2,14.8,4.7,34.4,3.4,36.5c-3.7,5.6-2.6,12.9,2.4,17.4c0.1,0.1,10.6,10,11.1,23.3
+                    C444.875,295.3,440.675,304.4,431.975,313.4z"/>
+            </g>
+        </symbol>
+
+        <symbol id="previous" viewBox="0 0 496 496">
+            <g>
+                <path d="M424,40H72c-17.673,0-32,14.327-32,32v352c0,17.673,14.327,32,32,32h352c17.673,0,32-14.327,32-32V72
+                    C456,54.327,441.673,40,424,40z M224,335.76L88.24,248L224,160.24V335.76z M384,335.76L248.24,248L384,160.24V335.76z"/>
+                <path d="M456,0H40C17.92,0.026,0.026,17.92,0,40v416c0.026,22.08,17.92,39.974,40,40h416c22.08-0.026,39.974-17.92,40-40V40
+                    C495.974,17.92,478.08,0.026,456,0z M480,456c0,13.255-10.745,24-24,24H40c-13.255,0-24-10.745-24-24V40
+                    c0-13.255,10.745-24,24-24h416c13.255,0,24,10.745,24,24V456z"/>
+            </g>
+        </symbol>
+
+        <symbol id="next" viewBox="0 0 496 496">
+            <g>
+                <path d="M424,40H72c-17.673,0-32,14.327-32,32v352c0,17.673,14.327,32,32,32h352c17.673,0,32-14.327,32-32V72
+                    C456,54.327,441.673,40,424,40z M112,335.76V160.24L247.76,248L112,335.76z M272,335.76V160.24L407.76,248L272,335.76z"/>
+                <path d="M456,0H40C17.92,0.026,0.026,17.92,0,40v416c0.026,22.08,17.92,39.974,40,40h416c22.08-0.026,39.974-17.92,40-40V40
+                    C495.974,17.92,478.08,0.026,456,0z M480,456c0,13.255-10.745,24-24,24H40c-13.255,0-24-10.745-24-24V40
+                    c0-13.255,10.745-24,24-24h416c13.255,0,24,10.745,24,24V456z"/>
+            </g>
+        </symbol>
+
+        <symbol id="heart" viewBox="0 0 51.997 51.997">
+            <path d="M51.911,16.242C51.152,7.888,45.239,1.827,37.839,1.827c-4.93,0-9.444,2.653-11.984,6.905
+	c-2.517-4.307-6.846-6.906-11.697-6.906c-7.399,0-13.313,6.061-14.071,14.415c-0.06,0.369-0.306,2.311,0.442,5.478
+	c1.078,4.568,3.568,8.723,7.199,12.013l18.115,16.439l18.426-16.438c3.631-3.291,6.121-7.445,7.199-12.014
+	C52.216,18.553,51.97,16.611,51.911,16.242z"/>
+        </symbol>
+
+        <symbol id="shop" viewBox="0 0 510 510">
+            <g>
+                <path d="M153,408c-28.05,0-51,22.95-51,51s22.95,51,51,51s51-22.95,51-51S181.05,408,153,408z M0,0v51h51l91.8,193.8L107.1,306
+                    c-2.55,7.65-5.1,17.85-5.1,25.5c0,28.05,22.95,51,51,51h306v-51H163.2c-2.55,0-5.1-2.55-5.1-5.1v-2.551l22.95-43.35h188.7
+                    c20.4,0,35.7-10.2,43.35-25.5L504.9,89.25c5.1-5.1,5.1-7.65,5.1-12.75c0-15.3-10.2-25.5-25.5-25.5H107.1L84.15,0H0z M408,408
+                    c-28.05,0-51,22.95-51,51s22.95,51,51,51s51-22.95,51-51S436.05,408,408,408z"/>
+            </g>
+        </symbol>
+    </svg>
+
+
+    <!-- .intro -->
+    <div class="intro">
+            <div class="intro__inner">
+                <img class="img" src="img/intro/Preview.jpg" alt="">
+            </div>
+    </div>
+
+    
+    <!-- .header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                
+                <nav class="nav">
+                    <div class="nav__logo">
+                        <img class="img nav__logo-img" src="../documentation/assets/images/image_1.png" alt="">
+                        <p class="nav__logo-name">Startuprr</p>
+                    </div>
+                    <div class="nav__links">
+                        <a class="nav__link" href="#">Home</a>
+                        <a class="nav__link" href="#">Portfolio</a>
+                        <a class="nav__link" href="#">Blog</a>
+                        <a class="nav__link" href="#">Pages</a>
+                        <a class="nav__link" href="#">Features</a>
+                        <a class="nav__link" href="#">Mega Menu</a>
+                        <a class="nav__link" href="#">Contact</a>
+                        <a class="nav__link" href="#">
+                            <svg class="search" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="310.42px" height="310.42px" viewBox="0 0 310.42 310.42" style="enable-background:new 0 0 310.42 310.42;"
+                                xml:space="preserve">
+                           <g>
+                               <g>
+                                   <path d="M273.587,214.965c49.11-49.111,49.109-129.021,0-178.132c-49.111-49.111-129.02-49.111-178.13,0
+                                       C53.793,78.497,47.483,140.462,76.51,188.85c0,0,2.085,3.498-0.731,6.312c-16.065,16.064-64.263,64.263-64.263,64.263
+                                       c-12.791,12.79-15.836,30.675-4.493,42.02l1.953,1.951c11.343,11.345,29.229,8.301,42.019-4.49c0,0,48.096-48.097,64.128-64.128
+                                       c2.951-2.951,6.448-0.866,6.448-0.866C169.958,262.938,231.923,256.629,273.587,214.965z M118.711,191.71
+                                       c-36.288-36.288-36.287-95.332,0.001-131.62c36.288-36.287,95.332-36.288,131.619,0c36.288,36.287,36.288,95.332,0,131.62
+                                       C214.043,227.996,155,227.996,118.711,191.71z"/>
+                                   <g>
+                                       <path d="M126.75,118.424c-1.689,0-3.406-0.332-5.061-1.031c-6.611-2.798-9.704-10.426-6.906-17.038
+                                           c17.586-41.559,65.703-61.062,107.261-43.476c6.611,2.798,9.704,10.426,6.906,17.038c-2.799,6.612-10.425,9.703-17.039,6.906
+                                           c-28.354-11.998-61.186,1.309-73.183,29.663C136.629,115.445,131.815,118.424,126.75,118.424z"/>
+                                   </g>
+                               </g>
+                           </g>
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
+
+                <div class="content">
+
+                    <div class="linetitle">
+                        <img class="lines" src="img/header/lines.png" alt="">
+                        <div class="linetitle-wrapper">
+                            <img class="before" src="../startapp/img/intro/before.png" alt="">
+                            <h3 class="linetitle-text">What we <span class="offer">offer</span></h3>
+                            <img class="after" src="../startapp/img/intro/after.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="subtitle">
+                        We offer our customers the best services & solutions, this is our main services list
+                    </div>
+
+                    <div class="content__cards">
+
+                        <div class="content__col">
+                            <div class="icon-wrapper">
+                                <img class="content__col-icon" src="img/header/icon1.png" alt="">
+                            </div>
+                            <div class="content__col-title">Responsive & Multipurpose</div>
+                            <div class="content__col-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veniam magnam totam.</div>
+                            <button class="content__col-btn">Read more</button>
+                        </div>
+
+                        <div class="content__col">
+                            <div class="icon-wrapper">
+                                <img class="content__col-icon" src="img/header/icon2.png" alt="">
+                            </div>
+                            <div class="content__col-title">Easy customization</div>
+                            <div class="content__col-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veniam magnam totam.</div>
+                            <button class="content__col-btn">Read more</button>
+                        </div>
+
+                        <div class="content__col">
+                            <div class="icon-wrapper">
+                                <img class="content__col-icon" src="img/header/icon3.png" alt="">
+                            </div>
+                            <div class="content__col-title">Awesome Friendly Support</div>
+                            <div class="content__col-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veniam magnam totam.</div>
+                            <button class="content__col-btn">Read more</button>
+                        </div>
+
+                    </div>
+
+                </div> <!-- /.content -->
+
+            </div> <!-- /.header__inner -->
+        </div> <!-- /.container -->
+    </header>
+
+    
+    <!-- .features -->
+    <section class="features">
+        <div class="container">
+            <div class="features__inner">
+
+                <div class="features__key">
+                    <img class="features__key-img" src="img/features/full-key.png" alt="">
+                </div>
+
+                <div class="title">
+                    <img class="before" src="../startapp/img/intro/before.png" alt="">
+                    <h3 class="text">Amazing <span class="offer">features</span></h3>
+                    <img class="after" src="../startapp/img/intro/after.png" alt="">
+                </div>
+
+                <div class="subtitle">
+                    With unlimited features that we offer, we promise to make everything that was impossible for you !
+                </div>
+
+                <div class="features__wrapper">    
+                    <div class="features__card">
+                        <div class="features__item">
+                            <img class="features__item-img" src="img/features/icon1.png" alt="">
+                            <div class="features__item-content">
+                                <div class="features__item-title">Responsive & Multipurpose</div>
+                                <div class="features__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veniam magnam totam.</div>
+                            </div>
+                        </div>
+                        <div class="features__item">
+                            <img class="features__item-img" src="img/features/icon2.png" alt="">
+                            <div class="features__item-content">
+                                <div class="features__item-title">Easy Customization</div>
+                                <div class="features__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veniam magnam totam.</div>
+                            </div>
+                        </div>
+                        <div class="features__item">
+                            <img class="features__item-img" src="img/features/icon3.png" alt="">
+                            <div class="features__item-content">
+                                <div class="features__item-title">Unlimited features</div>
+                                <div class="features__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veniam magnam totam.</div>
+                            </div>
+                        </div>
+                    </div> <!-- /.features__card -->
+
+                    <div class="features__images">
+                        <img class="features__images-img" src="img/features/device.png" alt="">
+                    </div>
+                </div> <!-- /.features__wrapper -->
+
+            </div> <!-- /.features__inner -->
+        </div> <!-- /.container -->
+    </section> <!-- /.features -->
+
+
+    <!-- .advantages -->
+    <div class="advantages">
+        <div class="container">
+            <div class="advantages__inner">
+
+                <div class="advantages__row">
+                    <div class="advantages__item">
+                        <img class="advantages__item-img" src="img/advantages/icon1.png" alt="">
+                        <div class="advantages__item-content">
+                            <div class="advantages__item-title">Responsive & Multipurpose</div>
+                            <div class="advantages__item-subtitle">Desktops, Tablets & Phones</div>
+                            <div class="advantages__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veniam magnam totam.</div>
+                        </div>
+                    </div>
+                    <div class="advantages__item">
+                        <img class="advantages__item-img" src="img/advantages/icon2.png" alt="">
+                        <div class="advantages__item-content">
+                            <div class="advantages__item-title">Easy Customization</div>
+                            <div class="advantages__item-subtitle">One Click Demo Content Installation</div>
+                            <div class="advantages__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veniam magnam totam.</div>
+                        </div>
+                    </div>
+                    <div class="advantages__item">
+                        <img class="advantages__item-img" src="img/advantages/icon3.png" alt="">
+                        <div class="advantages__item-content">
+                            <div class="advantages__item-title">Unlimited features</div>
+                            <div class="advantages__item-subtitle">Shortcodes, Typography & Different Layouts</div>
+                            <div class="advantages__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veniam magnam totam.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advantages__row">
+                    <div class="advantages__item">
+                        <img class="advantages__item-img" src="img/advantages/icon4.png" alt="">
+                        <div class="advantages__item-content">
+                            <div class="advantages__item-title">Clean & Modular Coding</div>
+                            <div class="advantages__item-subtitle">100% Clean, Valid & Well-Commented Coding</div>
+                            <div class="advantages__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veniam magnam totam.</div>
+                        </div>
+                    </div>
+                    <div class="advantages__item">
+                        <img class="advantages__item-img" src="img/advantages/icon5.png" alt="">
+                        <div class="advantages__item-content">
+                            <div class="advantages__item-title">The Best E-commerce solutions</div>
+                            <div class="advantages__item-subtitle">WooCommerce Fully Integration</div>
+                            <div class="advantages__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veniam magnam totam.</div>
+                        </div>
+                    </div>
+                    <div class="advantages__item">
+                        <img class="advantages__item-img" src="img/advantages/icon6.png" alt="">
+                        <div class="advantages__item-content">
+                            <div class="advantages__item-title">Awesome friendly support</div>
+                            <div class="advantages__item-subtitle">Free Lifetime Support & Updates</div>
+                            <div class="advantages__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veniam magnam totam.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- /.advantages__inner -->
+        </div> <!-- /.container -->
+    </div> <!-- /.advantages -->
+    
+
+    <!-- .skills -->
+    <section class="skills">
+        <div class="container">
+            <div class="skills__inner">
+
+                <div class="skills__bag">
+                    <img class="skills__bag-img" src="img/skills/bag.png" alt="">
+                </div>
+
+                <div class="title">
+                    <img class="before" src="../startapp/img/intro/before.png" alt="">
+                    <h3 class="text">Our powerful <span class="offer">skills</span></h3>
+                    <img class="after" src="../startapp/img/intro/after.png" alt="">
+                </div>
+
+                <div class="subtitle">
+                    We're good and experienced at different things and areas and we promise about quality of our works
+                </div>
+
+                <div class="skills__row">
+                    <div class="skills__item">
+                        <div class="skills__item-circle">
+                            <img src="img/skills/circle.png" alt="">
+                            <div class="skills__item-num">75%</div>
+                        </div>
+                        <div class="skills__item-text">Web design</div>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills__item-circle">
+                            <img src="img/skills/circle2.png" alt="">
+                            <div class="skills__item-num">92%</div>
+                        </div>
+                        <div class="skills__item-text">Web development</div>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills__item-circle">
+                            <img src="img/skills/circle3.png" alt="">
+                            <div class="skills__item-num">68%</div>
+                        </div>
+                        <div class="skills__item-text">Speed optimization</div>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills__item-circle">
+                            <img src="img/skills/circle4.png" alt="">
+                            <div class="skills__item-num">100%</div>
+                        </div>
+                        <div class="skills__item-text">Customer support</div>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills__item-circle">
+                            <img src="img/skills/circle5.png" alt="">
+                            <div class="skills__item-num">83%</div>
+                        </div>
+                        <div class="skills__item-text">Marketing</div>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills__item-circle">
+                            <img src="img/skills/circle6.png" alt="">
+                            <div class="skills__item-num">50%</div>
+                        </div>
+                        <div class="skills__item-text">Advertisement</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- .works -->
+    <section class="works">
+        <div class="works__inner">
+
+            <div class="linetitle">
+                <img class="lines" src="img/header/lines.png" alt="">
+                <div class="linetitle-wrapper">
+                    <img class="before" src="../startapp/img/intro/before.png" alt="">
+                    <h3 class="linetitle-text">Sample <span class="offer">works</span></h3>
+                    <img class="after" src="../startapp/img/intro/after.png" alt="">
+                </div>
+            </div>
+
+            <div class="subtitle">
+                Let's take a look at some of the best of our works here, we love them and hope you too
+            </div>
+
+            <div class="works__content">
+                <div class="works__row">
+                    <div class="works__item">
+                        <div class="works__item-wrapper">
+                            <img class="works__item-img" src="img/works/pic.png" alt="">
+                            <div class="works__item-title">Corporate Brochure</div>
+                            <div class="works__item-subtitle">Illustration / Print</div>
+                            <div class="works__item-like">
+                                <img class="heart" src="img/works/heart.png" alt="">
+                                <div class="num">138</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works__item">
+                        <div class="works__item-wrapper">
+                            <img class="works__item-img" src="img/works/pic.png" alt="">
+                            <div class="works__item-title">Corporate Brochure</div>
+                            <div class="works__item-subtitle">Illustration / Print</div>
+                            <div class="works__item-like">
+                                <img class="heart" src="img/works/heart.png" alt="">
+                                <div class="num">138</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works__item">
+                        <div class="works__item-wrapper">
+                            <img class="works__item-img" src="img/works/pic.png" alt="">
+                            <div class="works__item-title">Corporate Brochure</div>
+                            <div class="works__item-subtitle">Illustration / Print</div>
+                            <div class="works__item-like">
+                                <img class="heart" src="img/works/heart.png" alt="">
+                                <div class="num">138</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works__item">
+                        <div class="works__item-wrapper">
+                            <img class="works__item-img" src="img/works/pic.png" alt="">
+                            <div class="works__item-title">Corporate Brochure</div>
+                            <div class="works__item-subtitle">Illustration / Print</div>
+                            <div class="works__item-like">
+                                <img class="heart" src="img/works/heart.png" alt="">
+                                <div class="num">138</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works__item">
+                        <div class="works__item-wrapper">
+                            <img class="works__item-img" src="img/works/pic.png" alt="">
+                            <div class="works__item-title">Corporate Brochure</div>
+                            <div class="works__item-subtitle">Illustration / Print</div>
+                            <div class="works__item-like">
+                                <img class="heart" src="img/works/heart.png" alt="">
+                                <div class="num">138</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works__item">
+                        <div class="works__item-wrapper">
+                            <img class="works__item-img" src="img/works/pic.png" alt="">
+                            <div class="works__item-title">Corporate Brochure</div>
+                            <div class="works__item-subtitle">Illustration / Print</div>
+                            <div class="works__item-like">
+                                <img class="heart" src="img/works/heart.png" alt="">
+                                <div class="num">138</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- /.works__row -->
+                
+                <div class="works__row">
+                    <div class="works__item">
+                        <div class="works__item-wrapper">
+                            <img class="works__item-img" src="img/works/pic.png" alt="">
+                            <div class="works__item-title">Corporate Brochure</div>
+                            <div class="works__item-subtitle">Illustration / Print</div>
+                            <div class="works__item-like">
+                                <img class="heart" src="img/works/heart.png" alt="">
+                                <div class="num">138</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works__item">
+                        <div class="works__item-wrapper">
+                            <img class="works__item-img" src="img/works/pic.png" alt="">
+                            <div class="works__item-title">Corporate Brochure</div>
+                            <div class="works__item-subtitle">Illustration / Print</div>
+                            <div class="works__item-like">
+                                <img class="heart" src="img/works/heart.png" alt="">
+                                <div class="num">138</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works__item">
+                        <div class="works__item-wrapper">
+                            <img class="works__item-img" src="img/works/pic.png" alt="">
+                            <div class="works__item-title">Corporate Brochure</div>
+                            <div class="works__item-subtitle">Illustration / Print</div>
+                            <div class="works__item-like">
+                                <img class="heart" src="img/works/heart.png" alt="">
+                                <div class="num">138</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works__item">
+                        <div class="works__item-wrapper">
+                            <img class="works__item-img" src="img/works/pic.png" alt="">
+                            <div class="works__item-title">Corporate Brochure</div>
+                            <div class="works__item-subtitle">Illustration / Print</div>
+                            <div class="works__item-like">
+                                <img class="heart" src="img/works/heart.png" alt="">
+                                <div class="num">138</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works__item">
+                        <div class="works__item-wrapper">
+                            <img class="works__item-img" src="img/works/pic.png" alt="">
+                            <div class="works__item-title">Corporate Brochure</div>
+                            <div class="works__item-subtitle">Illustration / Print</div>
+                            <div class="works__item-like">
+                                <img class="heart" src="img/works/heart.png" alt="">
+                                <div class="num">138</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works__item">
+                        <div class="works__item-wrapper">
+                            <img class="works__item-img" src="img/works/pic.png" alt="">
+                            <div class="works__item-title">Corporate Brochure</div>
+                            <div class="works__item-subtitle">Illustration / Print</div>
+                            <div class="works__item-like">
+                                <img class="heart" src="img/works/heart.png" alt="">
+                                <div class="num">138</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- /.works__row -->
+                
+            </div> <!-- /.works__content -->
+
+            <div class="container">
+                <button class="works__btn">View all works</button>
+            </div>
+
+        </div> <!-- /.works__inner -->
+    </section> <!-- /.works -->
+
+
+    <section class="facts">
+        <div class="container">
+            <div class="facts__inner">
+
+                <div class="skills__bag">
+                    <img class="skills__bag-img" src="img/skills/bag.png" alt="">
+                </div>
+
+                <div class="title">
+                    <img class="before" src="../startapp/img/intro/before.png" alt="">
+                    <h3 class="text">Company <span class="offer">facts</span></h3>
+                    <img class="after" src="../startapp/img/intro/after.png" alt="">
+                </div>
+
+                <div class="subtitle">
+                    We do love to work and increase our counter numbers, this is what we've done till now
+                </div>
+
+                <div class="facts__content">
+                    <div class="facts__item">
+                        <div class="facts__item-numbox">
+                            <svg class="rhombus">
+                                <use xlink:href="#diamond"></use>
+                            </svg>
+                            <div class="facts__item-number">218</div>
+                            <svg class="rhombus">
+                                <use xlink:href="#diamond"></use>
+                            </svg>
+                        </div>
+
+                        <div class="facts__item-check">
+                            <svg class="select">
+                                <use xlink:href='#select'></use>
+                            </svg>
+                        </div>
+
+                        <div class="facts__item-text">
+                            Completed Projects
+                        </div>
+                    </div> <!-- /.facts__item -->
+
+                    <div class="facts__item">
+                        <div class="facts__item-numbox">
+                            <svg class="rhombus">
+                                <use xlink:href="#diamond"></use>
+                            </svg>
+                            <div class="facts__item-number">360</div>
+                            <svg class="rhombus">
+                                <use xlink:href="#diamond"></use>
+                            </svg>
+                        </div>
+
+                        <div class="facts__item-check">
+                            <svg class="select">
+                                <use xlink:href='#hourglass'></use>
+                            </svg>
+                        </div>
+
+                        <div class="facts__item-text">
+                            Hours of work <span class="date">/ Month</span>
+                        </div>
+                    </div> <!-- /.facts__item -->
+
+                    <div class="facts__item">
+                        <div class="facts__item-numbox">
+                            <svg class="rhombus">
+                                <use xlink:href="#diamond"></use>
+                            </svg>
+                            <div class="facts__item-number">135</div>
+                            <svg class="rhombus">
+                                <use xlink:href="#diamond"></use>
+                            </svg>
+                        </div>
+
+                        <div class="facts__item-check">
+                            <svg class="select">
+                                <use xlink:href='#label'></use>
+                            </svg>
+                        </div>
+
+                        <div class="facts__item-text">
+                            Solved Tickets
+                        </div>
+                    </div> <!-- /.facts__item -->
+
+                    <div class="facts__item">
+                        <div class="facts__item-numbox">
+                            <svg class="rhombus">
+                                <use xlink:href="#diamond"></use>
+                            </svg>
+                            <div class="facts__item-number">174</div>
+                            <svg class="rhombus">
+                                <use xlink:href="#diamond"></use>
+                            </svg>
+                        </div>
+
+                        <div class="facts__item-check">
+                            <svg class="select">
+                                <use xlink:href='#like'></use>
+                            </svg>
+                        </div>
+
+                        <div class="facts__item-text">
+                            Satisfied clients
+                        </div>
+                    </div> <!-- /.facts__item -->
+
+                </div> <!-- /.facts__content -->
+
+            </div> <!-- /.facts__inner -->
+        </div> <!-- /.container -->
+    </section> <!-- /.facts -->
+
+    
+    <!-- .question -->
+    <div class="question">
+        <div class="container">
+            <div class="question__inner">
+
+                <div class="question__content">
+                    Are you satisfied with unlimited features that we offer?
+                </div>
+
+                <div class="question__buttons">
+                    <button class="btn" type="button">Purchase it now</button>
+                    <button class="btn" type="button">Contact us now</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- .team -->
+    <section class="team">
+        <div class="container">
+            <div class="team__inner">
+
+                <div class="linetitle-outer">
+                    <svg class="previous">
+                        <use xlink:href="#previous"></use>
+                    </svg>
+                    
+                    <div class="linetitle">
+                        <div class="linetitle-wrapper">
+                            <img class="before" src="../startapp/img/intro/before.png" alt="">
+                            <h3 class="linetitle-text">Team <span class="offer">members</span></h3>
+                            <img class="after" src="../startapp/img/intro/after.png" alt="">
+                        </div>
+                    </div>
+
+                    <svg class="next">
+                        <use xlink:href="#next"></use>
+                    </svg>
+
+                    <img class="lines" src="img/header/lines.png" alt="">
+                </div>
+
+                <div class="subtitle">
+                    We do love to work and increase our counter numbers, this is what we've done till now
+                </div>
+
+                <div class="team__content">
+                    <div class="team__item">
+                        <img class="team__item-img" src="https://via.placeholder.com/270" alt="">
+                        <div class="team__item-name">Alexis Simpson</div>
+                        <div class="team__item-position">CEO & Developer</div>
+                        <div class="team__item-email">
+                            <img class="envelope" src="img/team/envelope.png" alt="">
+                            <div class="envelope-text">a.simpson@unique.com</div>
+                        </div>
+                        <div class="team__item-phone">
+                            <img class="phone" src="img/team/call-answer.png" alt="">
+                            <div class="phone-text">+1 911 (77) 222-1111</div>
+                        </div>
+                    </div>
+                    <div class="team__item">
+                        <img class="team__item-img" src="https://via.placeholder.com/270" alt="">
+                        <div class="team__item-name">Alexis Simpson</div>
+                        <div class="team__item-position">CEO & Developer</div>
+                        <div class="team__item-email">
+                            <img class="envelope" src="img/team/envelope.png" alt="">
+                            <div class="envelope-text">a.simpson@unique.com</div>
+                        </div>
+                        <div class="team__item-phone">
+                            <img class="phone" src="img/team/call-answer.png" alt="">
+                            <div class="phone-text">+1 911 (77) 222-1111</div>
+                        </div>
+                    </div>
+                    <div class="team__item">
+                        <img class="team__item-img" src="https://via.placeholder.com/270" alt="">
+                        <div class="team__item-name">Alexis Simpson</div>
+                        <div class="team__item-position">CEO & Developer</div>
+                        <div class="team__item-email">
+                            <img class="envelope" src="img/team/envelope.png" alt="">
+                            <div class="envelope-text">a.simpson@unique.com</div>
+                        </div>
+                        <div class="team__item-phone">
+                            <img class="phone" src="img/team/call-answer.png" alt="">
+                            <div class="phone-text">+1 911 (77) 222-1111</div>
+                        </div>
+                    </div>
+                    <div class="team__item">
+                        <img class="team__item-img" src="https://via.placeholder.com/270" alt="">
+                        <div class="team__item-name">Alexis Simpson</div>
+                        <div class="team__item-position">CEO & Developer</div>
+                        <div class="team__item-email">
+                            <img class="envelope" src="img/team/envelope.png" alt="">
+                            <div class="envelope-text">a.simpson@unique.com</div>
+                        </div>
+                        <div class="team__item-phone">
+                            <img class="phone" src="img/team/call-answer.png" alt="">
+                            <div class="phone-text">+1 911 (77) 222-1111</div>
+                        </div>
+                    </div>
+
+                    
+                </div> <!-- /.team__content -->
+
+            </div> <!-- /.team__inner -->
+        </div> <!-- /.container -->
+    </section> <!-- /.team -->
+
+
+    <!-- .reviews -->
+    <div class="reviews">
+        <div class="container">
+            <div class="reviews__inner">
+
+                <div class="reviews__quote">
+                    <img src="img/reviews/quote.png" alt="">
+                </div>
+                <div class="reviews__title">
+                    ALEXIS SIMPSON <span class="position">- CEO & Developer</span>
+                </div>
+                <div class="reviews__text">
+                    Lorem ipsum dolor sit amet, laudantium, totam rem. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo consequat magna, id molestie ipsum volutpat quis.
+                </div>
+                <div class="reviews__btn">
+                    <a href="#" type="button">
+                        <svg class="previous">
+                            <use xlink:href="#previous"></use>
+                        </svg>
+                    </a>
+                    <a href="#" type="button">
+                        <svg class="next">
+                            <use xlink:href="#next"></use>
+                        </svg>
+                    </a>
+                </div>
+
+            </div> <!-- /.reviews__inner -->
+        </div> <!-- /.container -->
+    </div> <!-- /.reviews -->
+
+
+    <div class="sponsors">
+        <div class="container">
+            <div class="sponsors__inner">
+                
+                <a class="prev-btn" href="#" type="button">
+                    <svg class="previous">
+                        <use xlink:href="#previous"></use>
+                    </svg>
+                </a>
+                
+                <img class="sponsors__img" src="img/sponsors/sponsor.png" alt="">
+                
+                <a class="next-btn" href="#" type="button">
+                    <svg class="next">
+                        <use xlink:href="#next"></use>
+                    </svg>
+                </a>
+
+            </div> <!-- /.sponsors__inner -->
+        </div> <!-- /.container -->
+    </div> <!-- /.sponsors -->
+
+
+    <!-- .prices -->
+    <section class="prices">
+        <div class="container">
+            <div class="prices__inner">
+
+                <div class="linetitle">
+                    <img class="lines" src="img/header/lines.png" alt="">
+                    <div class="linetitle-wrapper">
+                        <img class="before" src="../startapp/img/intro/before.png" alt="">
+                        <h3 class="linetitle-text">Real Cheap <span class="offer">prices</span></h3>
+                        <img class="after" src="../startapp/img/intro/after.png" alt="">
+                    </div>
+                </div>
+
+                <div class="subtitle">
+                    We offer all our services in real low prices in comparison with similar companies                  
+                </div>
+
+                <div class="prices__content">
+
+                    <div class="prices__item">
+                        <div class="prices__item-plan">Standard plan</div>
+                        <div class="prices__item-pricebox">
+                            <div class="price">19</div>
+                            <div class="secondary-price">
+                                <div class="secondary-price__num">99</div>
+                                <img src="img/prices/dot.png" class="secondary-price__figure">
+                            </div>
+                        </div>
+                        <div class="prices__item-features">
+                            <p>5 projects</p>
+                            <p>5 GB Storage</p>
+                            <p>Unlimited Users</p>
+                            <p>10 GB Bandwith</p>
+                            <p>Enhanced Security</p>
+                        </div>
+                        <div class="prices__item-btn">
+                            <button class="btn">Sign Up Now</button>
+                        </div>
+                    </div> <!-- /.prices__item -->
+                    <div class="prices__item">
+                        <div class="prices__item-plan">Standard plan</div>
+                        <div class="prices__item-pricebox">
+                            <div class="price">19</div>
+                            <div class="secondary-price">
+                                <div class="secondary-price__num">99</div>
+                                <img src="img/prices/dot.png" class="secondary-price__figure">
+                            </div>
+                        </div>
+                        <div class="prices__item-features">
+                            <p>5 projects</p>
+                            <p>5 GB Storage</p>
+                            <p>Unlimited Users</p>
+                            <p>10 GB Bandwith</p>
+                            <p>Enhanced Security</p>
+                        </div>
+                        <div class="prices__item-btn">
+                            <button class="btn">Sign Up Now</button>
+                        </div>
+                    </div> <!-- /.prices__item -->
+                    <div class="prices__item">
+                        <div class="prices__item-plan">Standard plan</div>
+                        <div class="prices__item-pricebox">
+                            <div class="price">19</div>
+                            <div class="secondary-price">
+                                <div class="secondary-price__num">99</div>
+                                <img src="img/prices/dot.png" class="secondary-price__figure">
+                            </div>
+                        </div>
+                        <div class="prices__item-features">
+                            <p>5 projects</p>
+                            <p>5 GB Storage</p>
+                            <p>Unlimited Users</p>
+                            <p>10 GB Bandwith</p>
+                            <p>Enhanced Security</p>
+                        </div>
+                        <div class="prices__item-btn">
+                            <button class="btn">Sign Up Now</button>
+                        </div>
+                    </div> <!-- /.prices__item -->
+                    <div class="prices__item">
+                        <div class="prices__item-plan">Standard plan</div>
+                        <div class="prices__item-pricebox">
+                            <div class="price">19</div>
+                            <div class="secondary-price">
+                                <div class="secondary-price__num">99</div>
+                                <img src="img/prices/dot.png" class="secondary-price__figure">
+                            </div>
+                        </div>
+                        <div class="prices__item-features">
+                            <p>5 projects</p>
+                            <p>5 GB Storage</p>
+                            <p>Unlimited Users</p>
+                            <p>10 GB Bandwith</p>
+                            <p>Enhanced Security</p>
+                        </div>
+                        <div class="prices__item-btn">
+                            <button class="btn">Sign Up Now</button>
+                        </div>
+                    </div> <!-- /.prices__item -->
+
+                </div> <!-- /.prices__content -->
+
+            </div> <!-- /.prices__inner -->
+        </div> <!-- /.container -->
+    </section> <!-- /.prices -->
+
+
+    <!-- .purchase -->
+    <div class="purchase">
+        <div class="container">
+            <div class="purchase__inner">
+
+                <div class="purchase__text">
+                    UNIQUE! We Do 
+                    <svg class="heart">
+                        <use xlink:href="#heart"></use>
+                    </svg>
+                    It And Hope You Too
+                </div>
+                <button type="button" class="purchase__btn">
+                    Purchase it now
+                    <svg class="shop">
+                        <use xlink:href='#shop'></use>
+                    </svg>
+                </button>
+
+            </div> <!-- /.purchase__inner -->
+        </div> <!-- /.container -->
+    </div> <!-- /.purchase -->
+
+
+    <!-- .contacts -->
+    <div class="contacts">
+        <div class="container">
+            <div class="contacts__inner">
+
+                <div class="nav__logo">
+                    <img class="img nav__logo-img" src="../documentation/assets/images/image_1.png" alt="">
+                    <p class="nav__logo-name">Startuprr</p>
+                </div>
+
+                <div class="contacts__links">
+                    <div class="contacts__link">
+                        <img class="flaticon" src="img/contacts/facebook-logo.png" alt="">
+                    </div>
+                    <div class="contacts__link">
+                        <img class="flaticon" src="img/contacts/twitter.png" alt="">
+                    </div>
+                    <div class="contacts__link">
+                        <img class="flaticon" src="img/contacts/pinterest.png" alt="">
+                    </div>
+                    <div class="contacts__link">
+                        <img class="flaticon" src="img/contacts/rss.png" alt="">
+                    </div>
+                    <div class="contacts__link">
+                        <img class="flaticon" src="img/contacts/vimeo.png" alt="">
+                    </div>
+                    <div class="contacts__link">
+                        <img class="flaticon" src="img/contacts/youtube.png" alt="">
+                    </div>
+                    <div class="contacts__link">
+                        <img class="flaticon" src="img/contacts/linkedin-letters.png" alt="">
+                    </div>
+                    <div class="contacts__link">
+                        <img src="img/contacts/1.png" alt="">
+                    </div>
+                    <div class="contacts__link">
+                        <img src="img/contacts/2.png" alt="">
+                    </div>
+                    <div class="contacts__link">
+                        <img src="img/contacts/3.png" alt="">
+                    </div>
+                    <div class="contacts__link">
+                        <img src="img/contacts/4.png" alt="">
+                    </div>
+                </div>
+
+                <div class="contacts__copyright">
+                    Copyright &copy; 2014 Startuprr, All Rights Reserved.
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JS -->
+    <script src="app.js"></script>
+
+</body>
+</html>
